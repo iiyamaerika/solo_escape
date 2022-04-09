@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 2022_04_06_060726) do
     t.string "name_kana", null: false
     t.string "nickname", null: false
     t.integer "gender", null: false
+    t.string "age", null: false
+    t.integer "partner_gender", null: false
+    t.integer "partner_age", null: false
+    t.integer "partner_type", null: false
+    t.string "personal_comment"
     t.string "image"
     t.string "address", null: false
     t.string "telephone_number", null: false
