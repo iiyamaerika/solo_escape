@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   
   root to: 'homes#top'
   get "home/about" => "homes#about", as: 'about'
+  get "home/diagnosis" => "homes#diagnosis", as: 'diagnosis'
   
   resources :users, only: [:index, :show, :edit, :update] do
     resource :relationships, only: [:create, :destroy]
