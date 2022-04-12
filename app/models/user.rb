@@ -38,46 +38,46 @@ class User < ApplicationRecord
 
   #enumで管理するもの
   enum gender: {
-    seclet: 0,
-    man: 1,
-    woman: 2,
-    non_binary: 3
+    users_gender_seclet: 0,
+    users_gender_man: 1,
+    users_gender_woman: 2,
+    users_gender_non_binary: 3
   }
 
   enum age: {
-    seclet: 0,
-    early_20s: 1,
-    late_20s: 2,
-    early_30s: 3,
-    late_30s: 4,
-    early_40s: 5,
-    late_40s: 6
+    users_age_seclet: 0,
+    users_age_early_20s: 1,
+    users_age_late_20s: 2,
+    users_age_early_30s: 3,
+    users_age_late_30s: 4,
+    users_age_early_40s: 5,
+    users_age_late_40s: 6
   }
 
   enum partner_gender: {
-    seclet: 0,
-    man: 1,
-    woman: 2,
-    non_binary: 3
+    partners_gender_seclet: 0,
+    partners_gender_man: 1,
+    partners_gender_woman: 2,
+    partners_gender_non_binary: 3
   }
 
   enum partner_age: {
-    seclet: 0,
-    early_20s: 1,
-    late_20s: 2,
-    early_30s: 3,
-    late_30s: 4,
-    early_40s: 5,
-    late_40s: 6
+    partners_age_seclet: 0,
+    partners_age_early_20s: 1,
+    partners_age_late_20s: 2,
+    partners_age_early_30s: 3,
+    partners_age_late_30s: 4,
+    partners_age_early_40s: 5,
+    partners_age_late_40s: 6
   }
 
   enum partner_type: {
-    unknown: 0,
-    dog_type: 1,
-    cat_type: 2,
-    rabbit_type: 3,
-    sheep_type: 4,
-    wolf_type: 5
+    partners_type_unknown: 0,
+    partners_type_dog_type: 1,
+    partners_type_cat_type: 2,
+    partners_type_rabbit_type: 3,
+    partners_type_sheep_type: 4,
+    partners_type_wolf_type: 5
   }
 
 end
