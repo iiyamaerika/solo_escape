@@ -1,0 +1,36 @@
+ja:
+  enums:
+    user:
+      gender:
+        users_gender_seclet: "秘密"
+        users_gender_man: "男性"
+        users_gender_woman: "女性"
+        users_gender_non_binary: "どちらでもない"
+      age:
+        users_age_seclet: "秘密"
+        users_age_early_20s: "20代前半"
+        users_age_late_20s: "20代後半"
+        users_age_early_30s: "30代前半"
+        users_age_late_30s: "30代後半"
+        users_age_early_40s: "40代前半"
+        users_age_late_40s: "40代後半"
+      partner_gender:
+        partners_gender_seclet: "秘密"
+        partners_gender_man: "男性"
+        partners_gender_woman: "女性"
+        partners_gender_non_binary: "どちらでもない"
+      partner_age:
+        partners_age_seclet: "秘密"
+        partners_age_early_20s: "20代前半"
+        partners_age_late_20s: "20代後半"
+        partners_age_early_30s: "30代前半"
+        partners_age_late_30s: "30代後半"
+        partners_age_early_40s: "40代前半"
+        partners_age_late_40s: "40代後半"
+      partner_type:
+        partners_type_unknown: "不明"
+        partners_type_dog_type: "犬系"
+        partners_type_cat_type: "猫系"
+        partners_type_rabbit_type: "うさぎ系"
+        partners_type_sheep_type: "羊系"
+        partners_type_wolf_type: "一匹オオカミ系"

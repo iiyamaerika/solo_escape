@@ -23,27 +23,32 @@
 
         <div class="form-group">
           <%= f.label :あなたの性別%>
-          <%= f.select :gender, [["秘密", 0 ], ["男性", 1],["女性", 2],["どちらでもない", 3]], {include_blank: '性別選択'}, class: 'form-control user-gender' %>
+          <%#= f.select :gender, User.genders_i18n.invert.map{|key, value| [key, User.genders[value]]}, { include_blank: t('選択してください') }, class: 'form-control user-gender' %>
+          <%= f.select :gender, User.genders.keys.map { |k| [I18n.t("enums.user.gender.#{k}"), k]}, { include_blank: t('選択してください') }, class: 'form-control user-gender' %>
         </div>
 
         <div class="form-group">
           <%= f.label :あなたの年齢 %>
-          <%= f.select :age, [["秘密", 0 ], ["20代前半", 1],["20代後半", 2],["30代前半", 3],["30代後半", 4],["40代前半",5],["40代後半",6]], {include_blank: '年齢選択'}, class: 'form-control user-age' %>
+          <%#= f.select :age, User.ages_i18n.invert.map{|key, value| [key, User.ages[value]]}, { include_blank: t('選択してください') }, class: 'form-control user-age' %>
+          <%= f.select :age, User.ages.keys.map { |k| [I18n.t("enums.user.age.#{k}"), k]}, { include_blank: t('選択してください') }, class: 'form-control user-age' %>
         </div>
 
         <div class="form-group">
           <%= f.label :好きな人の性別%>
-          <%= f.select :partner_gender, [["秘密", 0 ], ["男性", 1],["女性", 2],["どちらでもない", 3]], {include_blank: '性別選択'}, class: 'form-control partner_gender' %>
+          <%#= f.select :partner_gender, User.partner_genders_i18n.invert.map{|key, value| [key, User.partner_genders[value]]}, { include_blank: t('選択してください') }, class: 'form-control partner_gender' %>
+          <%= f.select :partner_gender, User.partner_genders.keys.map { |k| [I18n.t("enums.user.partner_gender.#{k}"), k]}, { include_blank: t('選択してください') }, class: 'form-control partner_gender' %>
         </div>
 
         <div class="form-group">
           <%= f.label :好きな人の年齢 %>
-          <%= f.select :partner_age, [["秘密", 0 ], ["20代前半", 1],["20代後半", 2],["30代前半", 3],["30代後半", 4],["40代前半",5],["40代後半",6]], {include_blank: '年齢選択'}, class: 'form-control partner_age' %>
+          <%#= f.select :partner_age, User.partner_ages_i18n.invert.map{|key, value| [key, User.partner_ages[value]]}, { include_blank: t('選択してください') }, class: 'form-control partner_age' %>
+          <%= f.select :partner_age, User.partner_ages.keys.map { |k| [I18n.t("enums.user.partner_age.#{k}"), k]}, { include_blank: t('選択してください') }, class: 'form-control partner_age' %>
         </div>
 
         <div class="form-group">
           <%= f.label :好きな人のタイプ（診断ページで診断してください）%>
-          <%= f.select :partner_type, [["不明", 0 ], ["犬系", 1],["猫系", 2],["うさぎ系", 3],["羊系", 4],["オオカミ系", 4]], {include_blank: 'タイプ選択'}, class: 'form-control partner_type' %>
+          <%#= f.select :partner_type, User.partner_types_i18n.invert.map{|key, value| [key, User.partner_types[value]]}, { include_blank: t('選択してください') }, class: 'form-control partner_type' %>
+          <%= f.select :partner_type, User.partner_types.keys.map { |k| [I18n.t("enums.user.partner_type.#{k}"), k]}, { include_blank: t('選択してください') }, class: 'form-control partner_type' %>
         </div>
 
         <div class="form-group">
@@ -90,7 +95,7 @@
       <% end %>
 
       <div class="mt-3 mb-5">
-      <%#= render "devise/shared/links" %>
+      <%= render "public/shared/links" %>
       </div>
 
    </div>
