@@ -42,7 +42,7 @@ class User < ApplicationRecord
     users_gender_man: 1,
     users_gender_woman: 2,
     users_gender_non_binary: 3
-  }
+  }, _prefix: true
 
   enum age: {
     users_age_seclet: 0,
@@ -52,14 +52,14 @@ class User < ApplicationRecord
     users_age_late_30s: 4,
     users_age_early_40s: 5,
     users_age_late_40s: 6
-  }
+  }, _prefix: true
 
   enum partner_gender: {
     partners_gender_seclet: 0,
     partners_gender_man: 1,
     partners_gender_woman: 2,
     partners_gender_non_binary: 3
-  }
+  }, _prefix: true
 
   enum partner_age: {
     partners_age_seclet: 0,
@@ -69,7 +69,7 @@ class User < ApplicationRecord
     partners_age_late_30s: 4,
     partners_age_early_40s: 5,
     partners_age_late_40s: 6
-  }
+  }, _prefix: true
 
   enum partner_type: {
     partners_type_unknown: 0,
@@ -78,6 +78,6 @@ class User < ApplicationRecord
     partners_type_rabbit_type: 3,
     partners_type_sheep_type: 4,
     partners_type_wolf_type: 5
-  }
+  }, _prefix: true
 
 end
