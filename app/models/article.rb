@@ -11,8 +11,8 @@ class Article < ApplicationRecord
   
   #enumで管理するもの
   enum status: {
-    public: 0,
-    private: 1
+    article_public: 0,
+    article_private: 1
   }
   
 end
