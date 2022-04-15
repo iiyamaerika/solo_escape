@@ -34,3 +34,7 @@ ja:
         partners_type_rabbit_type: "うさぎ系"
         partners_type_sheep_type: "羊系"
         partners_type_wolf_type: "一匹オオカミ系"
+    article:
+      status:
+        article_public: "公開"
+        article_private: "非公開"
