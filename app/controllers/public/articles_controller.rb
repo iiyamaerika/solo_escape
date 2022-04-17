@@ -27,6 +27,17 @@ class Public::ArticlesController < ApplicationController
   end
   
   def edit
+    @article = Article.find(params[:id])
+  end
+  
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path(@article)
+      flash[:notice] = '編集に成功しました'
+    else
+      render "edit"
+    end
   end
 
   def destroy
