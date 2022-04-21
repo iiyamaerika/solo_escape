@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   }
 
   scope module: :public do
+    root 'homes#top'
     get '/top' =>  'homes#top'
     get '/about' => 'homes#about'
     get "/diagnosis" => "homes#diagnosis", as: 'diagnosis'
