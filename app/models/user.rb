@@ -80,4 +80,14 @@ class User < ApplicationRecord
     partners_type_wolf_type: 5
   }, _prefix: true
 
+  # プロフィール画像がない場合は"no-image-icon.jpg"を表示させる
+  def get_image(width, height)
+    unless image.attached?
+      file_path = Rails.root.join('app/assets/images/no_image_icon.jpg')
+      image.attach(io: File.open(file_path), filename: 'no_image_icon.jpg', content_type: 'image/jpeg')
+    end
+    image.variant(resize_to_fill: [width, height]).processed
+  end
+
+
 end

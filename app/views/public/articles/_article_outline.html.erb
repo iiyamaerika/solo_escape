@@ -11,6 +11,7 @@
             </div>
           <% end %>
           <p class="card-text text-right"><small class="text-muted"><%= article.created_at.strftime('%Y/%m/%d') %></small></p>
+          <%= link_to "詳細へ", article_path(article), class: "btn btn-primary stretched-link" %>
         </div>
       </div>
     </div>
