@@ -38,3 +38,8 @@ ja:
       status:
         article_public: "公開"
         article_private: "非公開"
+  date:
+    order:
+      - :year
+      - :month
+      - :day
