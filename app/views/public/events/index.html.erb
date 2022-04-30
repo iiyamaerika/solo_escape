@@ -1,0 +1,8 @@
+<h1>Schedule</h1>
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+  <% events.each do |event| %><br />
+    <%= event.start_time.strftime('%H:%M') %>
+    <%= link_to event.title, event_path(event) %>
+  <% end %>
+<% end %>

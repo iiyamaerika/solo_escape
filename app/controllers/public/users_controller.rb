@@ -1,11 +1,11 @@
 class Public::UsersController < ApplicationController
   
   def index
-    @events = Event.all
   end
   
   def show
     @user = User.find(params[:id])
+    @articles = @user.articles
   end
   
   def edit
