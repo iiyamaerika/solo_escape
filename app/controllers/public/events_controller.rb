@@ -14,7 +14,7 @@ class Public::EventsController < ApplicationController
 
   def create
     Event.create(event_parameter)
-    redirect_to events_path
+    redirect_to user_path(current_user)
   end
 
   def destroy
