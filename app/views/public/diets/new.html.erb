@@ -11,8 +11,8 @@
   </div>
 
   <div class="submit">
-    
-    <%= f.submit %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.submit "送信" %>
   </div>
-  
+
 <% end %>

@@ -1,13 +1,14 @@
 class Public::DietsController < ApplicationController
 
   def index
-    @data = Weight.where(user_id: current_user.id)
+    # @data = Weight.where(user_id: current_user.id)
+    @data = current_user.weights
   end
-  
+
   def new
     @weight = Weight.new
   end
-  
+
   def create
     Weight.create(weight_parameter)
     redirect_to diets_path
@@ -35,7 +36,7 @@ class Public::DietsController < ApplicationController
   private
 
   def weight_parameter
-    params.require(:weight).permit(:date, :weight)
+    params.require(:weight).permit(:date, :weight, :user_id)
   end
 
 end
