@@ -1,0 +1,2 @@
+<%#= line_chart @data.group_by_day(:date, series: false).average(:weight),height: "400px",xtitle: "日", ytitle: "体重",min: 30, max: 80, curve: false %>
+<%= line_chart @data.group_by_day(:date, series: false).sum(:weight), curve: false, width: "80vw", height: "50vh", xtitle: "日付", ytitle: "kg", discrete: true %>

@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     resources :notifications, only: [:index, :destroy]
     resources :chats, only: [:index, :show, :create]
     resources :events
+    resources :diets
   end
 
   # 問い合わせ
