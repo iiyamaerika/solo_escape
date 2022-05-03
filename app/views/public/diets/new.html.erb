@@ -1,0 +1,17 @@
+<%= form_with model: @weight, url: diets_path, local: true do |f| %>
+
+  <div class="date">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="weight">
+    <%= f.label :weight %>
+    <%= f.number_field :weight %>
+  </div>
+
+  <div class="submit">
+    <%= f.submit %>
+  </div>
+  
+<% end %>
