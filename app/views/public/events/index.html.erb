@@ -1,8 +1,16 @@
-<h1>Schedule</h1>
-<%= month_calendar events: @events do |date, events| %>
-  <%= date.day %>
-  <% events.each do |event| %><br />
-    <%= event.start_time.strftime('%H:%M') %>
-    <%= link_to event.title, event_path(event) %>
-  <% end %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-5 d-flex justify-content-center">
+      <h2>カレンダー</h2>
+    </div>
+    <div class="col-md-12 mt-5">
+      <%= month_calendar events: @events do |date, events| %>
+        <%= date.day %>
+        <% events.each do |event| %><br />
+          <%= event.start_time.strftime('%H:%M') %>
+          <%= link_to event.title, event_path(event) %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

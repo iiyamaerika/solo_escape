@@ -1,1 +1,10 @@
-<%= line_chart @data.group_by_day(:date, series: false).sum(:weight), curve: false, width: "80vw", height: "50vh", xtitle: "日付", ytitle: "体重（kg）", discrete: true %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-5 d-flex justify-content-center">
+      <h2>ダイエット記録</h2>
+    </div>
+    <div class="col-md-12 mt-5">
+      <%= line_chart @data.group_by_day(:date, series: false).sum(:weight), curve: false, width: "80vw", height: "50vh", xtitle: "日付", ytitle: "体重（kg）", discrete: true %>
+    </div>
+  </div>
+</div>
