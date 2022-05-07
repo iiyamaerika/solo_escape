@@ -1,8 +1,9 @@
 <div>
   <div class="mt-2 mb-2">
-    <%= image_tag user.get_image(200,200) %>
+    <%= image_tag user.get_image(200,200), class: "rounded-circle mb-4" %>
   </div>
   <p>名前：<%= user.nickname %></p>
   <p>ひとこと：<%= user.personal_comment %></p>
+  <p><%= link_to "編集", edit_user_path(current_user), class: "btn btn-success" %></p>
 
 </div>
