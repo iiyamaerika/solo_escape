@@ -6,5 +6,8 @@
     <div class="col-md-12 mt-5">
       <%= line_chart @data.group_by_day(:date, series: false).sum(:weight), curve: false, width: "80vw", height: "50vh", xtitle: "日付", ytitle: "体重（kg）", discrete: true %>
     </div>
+    <div class="col-md-12 mt-5 mb-5 d-flex justify-content-center">
+      <%= link_to "ダイエットを記録する", new_diet_path,class: "btn btn-sm btn-success" %>
+    </div>
   </div>
 </div>
