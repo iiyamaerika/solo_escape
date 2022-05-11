@@ -26,7 +26,6 @@ Rails.application.routes.draw do
       patch 'withdraw', to: 'users#withdraw', as: 'withdraw'
       get 'calendar', to: 'users#calendar', as: 'calendar'
       get 'timeline', to: 'users#timeline', as: 'timeline'
-      get 'diet', to: 'users#diet', as: 'diet'
     end
     resources :articles, only: [:index, :show, :edit, :new, :create, :destroy, :update] do
       resource :favorites, only: [:create, :destroy, :show]
