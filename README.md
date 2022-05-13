@@ -47,7 +47,7 @@
 
 ## テーブル定義書、ER図、画面遷移図（制作途中）
 
-https://docs.google.com/spreadsheets/d/1Ta8C1pkw03-xXqmF6j-H-3B2Aqaal34F_9fbYggSUgo/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1Cw6SJDGFbQnqt1hxU9cHkU13j8_Lb667poPU0UAQny4/edit?usp=sharing
 
 ## 開発環境
 
