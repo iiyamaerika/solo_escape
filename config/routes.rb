@@ -17,7 +17,6 @@ Rails.application.routes.draw do
     root 'homes#top'
     get '/top' =>  'homes#top'
     get '/about' => 'homes#about'
-    get "/diagnosis" => "homes#diagnosis", as: 'diagnosis'
     resources :users, only: [:index, :show, :edit, :update] do
       resource :relationships, only: [:create, :destroy]
       get 'followings' => 'relationships#followings', as: 'followings'
@@ -35,6 +34,7 @@ Rails.application.routes.draw do
     resources :chats, only: [:index, :show, :create]
     resources :events
     resources :diets
+    resources :diagnosises, only: [:index, :show, :create, :new]
   end
 
   # 問い合わせ
