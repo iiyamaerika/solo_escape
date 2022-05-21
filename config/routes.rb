@@ -35,6 +35,7 @@ Rails.application.routes.draw do
     resources :events
     resources :diets
     resources :diagnosises, only: [:index, :show, :create, :new]
+    post '/diagnosises/:id' => 'diagnosises#show'
   end
 
   # 問い合わせ
