@@ -14,6 +14,7 @@
           <li class="drawer-menu-item" ><%= link_to "カレンダー", events_path %></li>
           <li class="drawer-menu-item" ><%= link_to "ユーザー一覧", users_path %></li>
           <li class="drawer-menu-item" ><%#= link_to "タイムライン", user_timeline_path(current_user.id) %></li>
+          <li class="drawer-menu-item" ><%= link_to "診断", diagnosises_path %></li>
           <li class="drawer-menu-item" ><%= link_to "投稿一覧(仮)", articles_path %></li>
           <li class="drawer-menu-item" ><%= link_to "新規投稿(仮)", new_article_path %></li>
           <li class="drawer-menu-item" ><%= link_to "ダイエット記録", diets_path %></li>
@@ -22,7 +23,6 @@
         <% else %>
           <li class="drawer-brand"><%= link_to "恋バナ", top_path %></li>
           <li class="drawer-menu-item" ><%= link_to "About", about_path %></li>
-          <li class="drawer-menu-item" ><%= link_to "診断", diagnosises_path %></li>
           <li class="drawer-menu-item" ><%= link_to "新規登録", new_user_registration_path %></li>
           <li class="drawer-menu-item" ><%= link_to "ログイン", new_user_session_path %></li>
         <% end %>
