@@ -9,6 +9,7 @@ class Public::DiagnosisesController < ApplicationController
 
   def show
     @diagnosis = Diagnosis.find_by(id: params[:id])
+    # byebug
   end
 
   def create
