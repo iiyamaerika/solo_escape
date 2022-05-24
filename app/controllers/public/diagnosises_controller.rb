@@ -1,5 +1,5 @@
 class Public::DiagnosisesController < ApplicationController
-  
+
   def index
   end
 
@@ -8,8 +8,7 @@ class Public::DiagnosisesController < ApplicationController
   end
 
   def show
-    @diagnosis = Diagnosis.find_by(id: params[:id])
-    # byebug
+    @diagnosis = Diagnosis.find(params[:id])
   end
 
   def create
@@ -27,5 +26,5 @@ private
   def diagnosis_params
       params.require(:diagnosis).permit(:id, question: [])
   end
-  
+
 end
