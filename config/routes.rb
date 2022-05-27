@@ -44,5 +44,10 @@ Rails.application.routes.draw do
   post 'contacts/back', to: 'contacts#back', as: 'back'
   get 'done', to: 'contacts#done', as: 'done'
 
+  namespace :admin do
+    root 'homes#top'
+    resources :diagnosises
+    resources :users, only: [:index, :edit, :update] 
+  end
 
 end
