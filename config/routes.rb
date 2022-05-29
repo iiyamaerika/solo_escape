@@ -49,5 +49,6 @@ Rails.application.routes.draw do
     resources :diagnosises
     resources :users, only: [:index, :edit, :update] 
   end
+  
 
 end

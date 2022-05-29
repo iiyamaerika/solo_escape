@@ -20,6 +20,10 @@
           <li class="drawer-menu-item" ><%= link_to "ダイエット記録", diets_path %></li>
           <li class="drawer-menu-item" ><%= link_to "通知", notifications_path %></li>
           <li class="drawer-menu-item" ><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% elsif admin_signed_in? %>
+          <li class="drawer-menu-item" ><%= link_to  "診断内容編集", admin_diagnosises_path %></li>
+          <li class="drawer-menu-item" ><%= link_to  "会員情報一覧", admin_users_path %></li>
+          <li class="drawer-menu-item" ><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
         <% else %>
           <li class="drawer-brand"><%= link_to "恋バナ", top_path %></li>
           <li class="drawer-menu-item" ><%= link_to "About", about_path %></li>
