@@ -12,16 +12,6 @@
             <td><%= @user.id %></td>
           </tr>
           <tr>
-            <td class="font-weight-bold">カテゴリー</td>
-            <td>
-              <%= f.radio_button :category, "private_user", checked: "checked" %>
-              <%= f.label :category, "個人ユーザー" %>
-              <br>
-              <%= f.radio_button :category, "shelter" %>
-              <%= f.label :category, "保護施設" %>
-            </td>
-          </tr>
-          <tr>
             <td class="font-weight-bold">氏名</td>
             <td><%= f.text_field :name %></td>
           </tr>
