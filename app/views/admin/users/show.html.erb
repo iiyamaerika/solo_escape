@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-5 d-flex justify-content-center">
+      <h2><%= @user.nickname %>さんの詳細情報</h2>
+    </div>
+
+        <div class="col-md-12 mt-5 d-flex justify-content-center">
+      <div class="table-responsive">
+        <table class="table table-hover table-condensed">
+          <tr>
+            <td class="font-weight-bold">会員ID</td>
+            <td><%= @user.id %></td>
+          </tr>
+          <tr>
+            <td class="font-weight-bold">氏名</td>
+            <td><%= @user.name %></td>
+          </tr>
+          <tr>
+            <td class="font-weight-bold">フリガナ</td>
+            <td><%= @user.name_kana %></td>
+          </tr>
+          <tr>
+            <td class="font-weight-bold">住所</td>
+            <td><%= @user.address %></td>
+          </tr>
+          <tr>
+            <td class="font-weight-bold">電話番号</td>
+            <td><%= @user.telephone_number %></td>
+          </tr>
+          <tr>
+            <td class="font-weight-bold">メールアドレス</td>
+            <td><%= @user.email %></td>
+          </tr>
+          <tr>
+            <td class="font-weight-bold">会員ステータス</td>
+            <td>
+              <% if @user.is_deleted == false %>
+                <p>退会</p>
+              <% else %>
+                <p>有効</p>
+              <% end %>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+</div>
